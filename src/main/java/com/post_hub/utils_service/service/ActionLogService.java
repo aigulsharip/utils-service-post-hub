@@ -1,5 +1,7 @@
 package com.post_hub.utils_service.service;
 
+import com.post_hub.utils_service.entity.ActionLog;
+import com.post_hub.utils_service.kafka.model.UtilMessage;
 import com.post_hub.utils_service.model.dto.ActionLogDTO;
 import com.post_hub.utils_service.model.request.ActionLogReadRequest;
 import com.post_hub.utils_service.model.request.ActionLogUpdateResultDTO;
@@ -15,5 +17,8 @@ public interface ActionLogService {
     UtilsResponse<PaginationResponse<ActionLogDTO>> findAllActionLogs(Pageable pageable);
 
     UtilsResponse<ActionLogUpdateResultDTO> setIsReadEqualsTrue(@NotNull ActionLogReadRequest request);
+
+    ActionLog saveLogFromKafkaMessage(UtilMessage message);
+
 
 }
