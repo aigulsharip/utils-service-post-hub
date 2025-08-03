@@ -23,15 +23,7 @@ import java.util.Objects;
         info = @Info(
                 title = "'POST_HUB' REST API",
                 version = "1.0",
-                description = """
-                        UTILS-service handles system notifications, audit logs, and read status management.
-
-                        - Fetch action logs by ID
-                        - Mark logs as read
-                        - Paginated log search
-
-                        Created by Mykola Shchypailo | [Send me email](mailto:kolyakol8787@gmail.com)""",
-                contact = @Contact(name = "POST_HUB")),
+                description = "UTILS-service handles system notifications, audit logs, and read status management."),
         security = { @SecurityRequirement(name = HttpHeaders.AUTHORIZATION)}
 )
 @SecurityScheme(
